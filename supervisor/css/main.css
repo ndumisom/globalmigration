@@ -1,0 +1,13 @@
+.success {
+    width: 298px;
+    background: #a5e283;
+    border: #337f09 1px solid;
+    padding: 5px;
+}
+
+.error {
+    width: 298px;
+    background: #ea7e7e;
+    border: #a71010 1px solid;
+    padding: 5px;
+}

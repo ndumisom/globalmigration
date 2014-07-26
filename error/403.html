@@ -1,0 +1,111 @@
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Global Migration</title>
+<link rel="SHORTCUT ICON" href="images/icon.png"> 
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="inner.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="slider.css" />
+<link rel="stylesheet" type="text/css" href="css/datetime.css" />
+<script type="text/javascript" src="../js/datetime.js"></script>
+<script type="text/javascript" src="slider.js"></script>
+<script type="text/javascript" src="externalJS.js" language="javascript"></script>
+<script type="text/javascript" src="dynamicAjax.js" language="javascript"></script>
+
+<script type="text/javascript" src="loadPageJS.js"></script>
+<script type="text/javascript" src="outer.js"></script>
+<style>
+       #notice{
+                border: 2px solid #FF0000;
+                width: 460px;
+                font-family: Verdana;
+                font-size: 14px;
+                color: #FF0000;
+                margin: 10px auto;
+                padding: 10px;
+                background: #FFFFCC
+                
+
+            }
+.tb {
+	border-style:solid;
+	border-width:2px;
+    border-color:#0000FF;
+	width: 55%;
+	}
+</style>
+</head>
+
+<body>
+<table  height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><div class="header"><img src="images/header.gif" width="1350" height="126" alt="a" /></div></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" id="content"><p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+         <p>&nbsp;</p>
+      
+      <table class="tb"  width="55%" border="0" cellpadding="0" cellspacing="0" bordercolor="#0000FF">
+      <tr>
+        <td><div align="center">
+            
+               <form name="login" action="p_l.php" method="post" onsubmit="return validateLogin()">
+			   
+                   <p><h2>Login page</h2> </p>
+             
+             
+              <table width="56%" border="0" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td colspan="3" align="center" valign="top"><?php
+
+if( isset($_SESSION['er']) ){echo '<span id="error"><b>'. $_SESSION['er'].'</b></span>'; unset($_SESSION['er']);}
+ 
+
+       
+  ?><p>&nbsp;</p></td>
+                </tr>
+                <tr>
+                  <td width="41%" align="right"><b>Username : </b></td>
+                  <td width="48%" ><input type="text"  name="username"  id="username"/></td>
+                  <td width="11%" rowspan="3"><img src="images/lock2.jpg" width="72" height="73"/></td>
+                </tr>
+                <tr>
+                  <td align="right"><b>Password : </b></td>
+                  <td ><input type="password"   name="password"  class="required"/></td>
+                  </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input  type="submit" id="search-submit" name="login" value="Login" onclick="overlay1( )" class="login"/></td>
+                  </tr>
+              </table>
+            
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+            </form>
+        </div></td>
+      </tr>
+    </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p><br/>
+    
+      
+      
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <td valign="top" id="foot">
+      <p>&nbsp;</p>
+      <p>GLOBAL MIGRATION <b>&reg; </b> </p>    </td>
+  </tr>
+</table>
+
+</body>
+</html>

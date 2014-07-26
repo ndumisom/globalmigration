@@ -1,0 +1,291 @@
+/* CSS Document */
+
+
+/* CSS Document */
+
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+body {
+    font: 0.8em "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+
+    background-color:aliceblue;
+
+    margin: 0;
+    padding: 0;
+}
+td{
+    text-align: left;
+
+}
+
+
+
+form{
+
+    font-family:Helvetica, Arial, Sans-serif;
+
+    font-weight:bolder;
+    color:#000000;
+    font-weight:bolder;
+    text-decoration:none;
+    font-size:9;
+
+
+}
+.menu{
+    background-image: url(../images/menu.gif);
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0.3em 0;
+    text-indent:-99999px;
+}
+#nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+    background: #2e2e2e url(images/nav_bar.jpg) repeat-x;
+    display: block;
+    overflow: hidden;
+    font-size: 0.9em;
+    height:33px;
+    text-transform:capitalize;
+}
+
+#info, #msg, #warning, #error, #validation {
+    border: 1px solid;
+    margin: 4px 0px;
+    padding:5px 5px 5px 5px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+#info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url(images/message_normal.gif);
+}
+#msg {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url(images/message_normal.gif);
+}
+#warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url(images/alerts.gif);
+}
+#error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url(images/error_large.gif);
+}
+
+.menu{
+    background-image:url(../images/menu.gif);
+    background-repeat:no-repeat;
+}
+#menu li {
+    display: inline;
+}
+#menu li a {
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#menu li a:hover {
+    text-decoration: none;
+    background-image:url(../images/hv.gif);
+    color: #000066;
+}
+#menu ul, ol, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#admin_mernu{
+
+}
+#admin_menu li {
+    display: block;
+    text-decoration: none;
+}
+admin_#menu li a {
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    color: #0099FF;
+    text-decoration: none;
+}
+#admin_menu li a:hover {
+    text-decoration: none;
+    color: blue;
+}
+#admin_menu ul, ol, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+#load {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url(images/ajax-loader.gif);
+    width: 43px;
+    height: 11px;
+    text-indent: -9999em;
+}
+#logintb {
+    position:relative;
+    border:thick #0033CC;
+}
+
+.login{
+    background-color: #0066FF;
+    color:#FFFFFF;
+    font-weight: bolder;
+}
+
+
+#profile {
+    font-family:Helvetica, Arial, Sans-serif;
+    color:darkblue;
+    font-weight: bolder;
+
+
+
+}
+#profile a{
+    font-family:Helvetica, Arial, Sans-serif;
+    color:darkblue;
+    font-weight: bolder;
+
+
+
+}
+
+h2 {
+    margin: 0;
+    padding: 0.5em 0;
+    color:#000000;
+    font-family:Helvetica, Arial, Sans-serif;
+}
+p {
+    margin: 0;
+    padding: 0.4em 0;
+    color:#686868;
+    line-height:1.4em;
+}
+#content{
+    background-image: url(../images/content.gif);
+    background-repeat: repeat-y;
+    width:100%;
+    height:100%;
+    background-color: aliceblue;
+
+
+}
+#foot {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    margin: 30px 0 0 0;
+    background-image:url(../images/footer.gif);;
+    background-repeat:no-repeat;
+
+
+
+}
+
+.tb {
+    font: 11px/24px Verdana, Arial, Helvetica, sans-serif;
+    border-style:solid;
+    border-width:2px;
+    border-color:#0000FF;
+    font-weight:600;
+    width: 100%;
+}
+
+.tb th {
+    padding: 0 0.5em;
+    text-align: left;
+}
+
+
+.tb td {
+    border-bottom: 1px solid #0000FF;
+
+}
+
+.tb td {
+    border-left: 1px solid #0000FF;
+    text-align: left;
+}
+.r:hover { 
+    background:#D1EEEE; 
+    color:FFFFFF;
+}
+.tab {
+    border-style:solid;
+    border-width:2px;
+    border-color:#0000FF;
+    width: 100
+}
+.tad {
+    border-bottom: 1px solid #0000FF;
+
+}
+/* Reminder pop up */
+
+.box {
+    background-color: #ffffff;
+    color: #888888;
+    height: 205px;
+    padding: 20px;
+    position: fixed;
+    right: 30%;
+    top: 25%;
+    width: 555px;
+    z-index: 20001;
+    border:2px solid #FF0000;
+    border-radius:10px;
+    -moz-border-radius:10px;
+}
+
+.overlay {
+
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20001;
+    opacity:0.5;
+}
+
+a.boxclose {
+    background: url("cancel.png") repeat scroll left top transparent;
+    cursor: pointer;
+    float: right;
+    height: 26px;
+    left: 32px;
+    position: relative;
+    top: -33px;
+    width: 26px;
+}
+.font{
+    color:#0000FF;
+}
