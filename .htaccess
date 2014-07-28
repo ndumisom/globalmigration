@@ -1,0 +1,3 @@
+
+ErrorDocument 403 /globalmigration/error/403.html
+ErrorDocument 404 /globalmigration/error/404.html
