@@ -60,7 +60,7 @@ function removeCustomAlert() {
 function validateLogin()
 {
 var x=document.forms["login"]["username"].value
-if (x==null || x=="")
+if (x==null || x=="Username")
   {
   alert("Please enter your username");
   return false;
@@ -76,51 +76,60 @@ if (x==null || x=="Password"|| x == "")
 
 function validateTask()
 {
-var x=document.forms["task"]["consultant"].value
+var x=document.forms["task"]["consultant"].value;
 if (x==null || x=="")
   {
-  alert("Please enter consultant name");
+  alert("Please select the consultant name");
   return false;
   }
   
-var y=document.forms["task"]["allocated_task"].value
+var y=document.forms["task"]["allocated_task"].value;
 if (y==null || y=="")
   {
-  alert("Please enter the task you are allocating");
+  alert("Please select the task ");
   return false;
   }
   
-  var z=document.forms["taskr"]["allocated_by"].value
-if (z==null || z=="")
-  {
-  alert("Please enter allocated_by");
-  return false;
-  }
+
   
-  var a=document.forms["task"]["allocated_to"].value
+  var a=document.forms["task"]["allocated_to"].value;
 if (a==null || a=="")
   {
-  alert("Please enter allocated person");
+  alert("Please select allocated person");
   return false;
   }
   
-  var b=document.forms["task"]["due_date"].value
+  var b=document.forms["task"]["due_date"].value;
 if (b==null || b=="")
   {
   alert("Please enter the due date");
   return false;
   }
-  var c=document.forms["add_user"]["level"].value
+  var c=document.forms["taskr"]["allocated_to"].value;
 if (c==null || c=="")
   {
-  alert("Please select a level");
+  alert("Please select a staff");
+  return false;
+  }
+  
+    var d=document.forms["task"]["allocated_task"].value;
+if (d==null || d=="")
+  {
+  alert("Please select a task");
+  return false;
+  }
+  
+  var d=document.forms["task"]["details"].value;
+if (d==null || d=="")
+  {
+  alert("Please search for the client");
   return false;
   }
   
 }
 
 //Permits
-
+/*
 function validatePermit()
 {
 var x=document.forms["permit"]["service"].value
@@ -143,20 +152,7 @@ if (x==null || x=="")
   alert("Please enterv permit status");
   return false;
   }
-  
-  var x=document.forms["permit"]["permit_no"].value
-if (x==null || x=="")
-  {
-  alert("Please enter permit number");
-  return false;
-  }
-  
-  var x=document.forms["permit"]["submission_office"].value
-if (x==null || x=="")
-  {
-  alert("Please enter subbmission office");
-  return false;
-  }
+
   var x=document.forms["permit"]["submission_date"].value
 if (x==null || x=="")
   {
@@ -206,120 +202,112 @@ if (x==null || x=="")
   
   
 }
-
+*/
 //Client
 function validateClient()
 {
-var x=document.forms["client"]["file_no"].value
+var x=document.forms["client"]["file_no"].value;
 if (x==null || x=="")
   {
-  alert("Please enter file number");
+  alert("Please enter a file number");
   return false;
   }
   
-var x=document.forms["client"]["title"].value
+var x=document.forms["client"]["title"].value;
 if (x=="" || x=="select")
   {
   alert("Please select a title");
   return false;
   }
   
-  var x=document.forms["client"]["surname"].value
+  var x=document.forms["client"]["surname"].value;
 if (x==null || x=="")
   {
   alert("Please enter surname");
   return false;
   }
   
-  var x=document.forms["client"]["firstname"].value
+  var x=document.forms["client"]["firstnames"].value;
+if (x==null || x=="")
+  {
+  alert("Please enter first name");
+  return false;
+  }
+   var x=document.forms["client"]["email"].value;
+   var atpos=x.indexOf("@");
+if (atpos<1 ||x==null || x=="")
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+   var x=document.forms["client"]["captured_by"].value;
+if (x==null || x=="")
+  {
+  alert("Please enter Captured By");
+  return false;
+  }
+  
+ 
+  }
+  
+  function validateMsg()
+{
+  
+  var x=document.forms["compose"]["to"].value;
+if (x==null || x=="")
+  {
+  alert("Please enter a name of a recipient");
+  return false;
+  }
+  
+  var y=document.forms["compose"]["msg"].value;
+if (y==null || y=="")
+  {
+  alert("Please enter a message");
+  return false;
+  }
+}
+  
+function validateAdd()
+{
+  
+  var x=document.forms["add_user"]["fname"].value;
 if (x==null || x=="")
   {
   alert("Please enter first name");
   return false;
   }
   
-  var x=document.forms["client"]["application_type"].value
-if (x==null || x=="")
+  var y=document.forms["add_user"]["surname"].value;
+if (y==null || y=="")
   {
-  alert("Please enter application type");
+  alert("Please enter  surname");
   return false;
   }
-  var x=document.forms["client"]["dob"].value
-if (x==null || x=="")
+ 
+  
+   var z=document.forms["add_user"]["email"].value;
+   var atpos=z.indexOf("@");
+if (atpos<1 ||z==null || z=="")
   {
-  alert("Please enter date of birth");
+  alert("Not a valid e-mail address");
+  return false;
+  }
+    var a=document.forms["add_user"]["cell_no"].value;
+if (sNaN(a)||a.indexOf(" ")!=-1)
+  {
+  alert("Enter numeric value");
   return false;
   }
   
-    var x=document.forms["client"]["passport_no"].value
-if (x==null || x=="")
-  {
-  alert("Please enter passport number");
-  return false;
-  }
+  if (a.length<8 || a.length>13)
+           {
+                alert("Please enter a valid number");
+                return false;
+           }
   
-    var x=document.forms["client"]["passport_expiry_date"].value
-if (x==null || x=="")
-  {
-  alert("Please enter date of birth");
-  return false;
-  }
-  
-
-  var x=document.forms["client"]["country_of_origin"].value
-if (x==null || x=="")
-  {
-  alert("Please select a country");
-  return false;
-  }
-  
-    var x=document.forms["client"]["dob"].value
-if (x==null || x=="")
-  {
-  alert("Please enter date of birth");
-  return false;
-  }
-  
-}
-  
-function validateAdd()
-{
-var x=document.forms["add_user"]["username"].value
-if (x==null || x=="")
-  {
-  alert("Please enter your username");
-  return false;
-  }
-  
-var x=document.forms["add_user"]["password"].value
-if (x==null || x=="")
-  {
-  alert("Please enter your password");
-  return false;
-  }
-  
-  var x=document.forms["add_user"]["firstname"].value
-if (x==null || x=="")
-  {
-  alert("Please enter your first name");
-  return false;
-  }
-  
-  var x=document.forms["add_user"]["surname"].value
-if (x==null || x=="")
-  {
-  alert("Please enter your surname");
-  return false;
-  }
-  
-  var x=document.forms["add_user"]["email"].value
-if (x==null || x=="")
-  {
-  alert("Please enter your email");
-  return false;
-  }
-  var x=document.forms["add_user"]["level"].value
-if (x==null || x=="")
+  var c=document.forms["add_user"]["level"].value;
+if (c==null || c=="")
   {
   alert("Please select a level");
   return false;
@@ -327,3 +315,22 @@ if (x==null || x=="")
   
 }
 
+
+function checkdate(input){
+var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Basic check for format validity
+var returnval=false
+if (!validformat.test(input.value))
+alert("Invalid Date Format. Please correct and submit again.")
+else{ //Detailed check for valid date ranges
+var monthfield=input.value.split("-")[0]
+var dayfield=input.value.split("-")[1]
+var yearfield=input.value.split("-")[2]
+var dayobj = new Date(yearfield, monthfield-1, dayfield)
+if ((dayobj.getFullYear()!=yearfield)||(dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield))
+alert("Invalid Day, Month, or Year range detected. Please correct and submit again.")
+else
+returnval=true
+}
+if (returnval==false) input.select()
+return returnval
+}
