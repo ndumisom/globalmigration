@@ -15,10 +15,8 @@ class profile {
         $sql_paramter = array($pass, $user_id);
         Database::Query($str_sql_select, $sql_paramter, TRUE);
         $row = Database::$int_num_rows;
-        foreach ($row as $rows) {
-            
-        }
-        if ( $rows == 0) {
+   
+        if ( $row == 0) {
             return false;
         } else {
             return true;
