@@ -213,7 +213,7 @@ $(document).ready(function(){
             </form>
             
             <?
-            $name = $_POST['name'];
+            $name = isset($_POST['name']);
             //connect  to the database 
             $db = mysql_connect("localhost", "root", "mapapa1531") or die('I cannot connect to the database  because: ' . mysql_error());
             //-select  the database to use 
@@ -221,7 +221,7 @@ $(document).ready(function(){
             //-query  the database table 
             $sql = "SELECT  *FROM client_details WHERE firstnames LIKE '%" . $name . "%' OR surname LIKE '%" . $name . "%' OR CONCAT(firstnames, ' ', surname) LIKE '%" . $name . "%' LIMIT 1";
             //-run  the query against the mysql query function 
-            $userID = $row['clientID'];
+            $userID = isset($row['clientID']);
             $result = mysql_query($sql);
             $numrows = mysql_num_rows($result);
 

@@ -38,3 +38,15 @@ class profile {
 }
 ?>
 
+<?php
+// $db=new profile();
+// $row =  $db->view_profile("consultant");
+
+//  print_r($row);
+
+// //Array ( [0] => Array ( [userID] => 31234 [clientID] => 0 [username] => ndumiso [password] => ayabonga [firstname] => ndumiso [surname] => mbete [email] => xmbete@gmail.com [mobile_no] => 12345 [level] => 1 [status] => 3 [time] => 0000-00-00 00:00:00 ) )
+
+// $result=$row[0];
+// echo "string".$result['userID'];
+
+?>

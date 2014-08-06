@@ -110,6 +110,32 @@ class Database {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     function login($username, $password, $email) {
 
         $str_sql_select = "select username, email, password from users where (binary username = ? or binary email = ?) and binary password = ? ";

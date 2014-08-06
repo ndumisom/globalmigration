@@ -1,14 +1,21 @@
-<? session_start(); 
+<?
+// ob_start(); 
+// session_start(); 
+    require_once("../classes/database.php");
+require_once("../classes/message.php");
+require_once 'class.php';
+$call = new Message() ;
     require_once('class.php');
     include("nicePaging1.php");
-    $call = new globalm;
+    //$call = new globalm;
     $paging = new nicePaging;
     $rowsPerPage= 10;
     $user = $_SESSION['log'];
     $to = $user;
+// $result=$call->list_all_inbox("consultant");
 
-    $Query = $paging->pagerQuery("SELECT * FROM  `message` WHERE  `to` = '$user' and (status = 3 or status = 0 or status = 1)  ORDER BY msg_id DESC", $rowsPerPage) or die(mysql_error());
-    $zero = mysql_num_rows($Query);
+    $result = $call->list_all_inbox($user);
+    $zero =count($result);
 ?>
 <style>
    
@@ -58,7 +65,8 @@
                                              </tr>
                                             
                                                     <?php
-                                                            while ($row = mysql_fetch_array($Query)) {
+                                                            for($i=0;$i<count($result);$i++) {
+                                                                $row=$result[$i];
                                                                  if ($row['status'] == 0 || $row['status'] == 3) {
                                                     ?>     
                                                     <tr>
